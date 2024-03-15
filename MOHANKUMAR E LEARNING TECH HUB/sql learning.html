@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Learning Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #87ceeb; /* Light blue navigation bar */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed; /* Fixed position at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 5px;
+            border: 1px solid #fff; /* White border */
+            border-radius: 5px; /* Rounded corners */
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 90px auto 20px; /* Adjust margin to accommodate fixed nav */
+            padding: 0 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .code {
+            background-color: #f0f0f0; /* Light gray background */
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SQL Learning Notes</h1>
+    </header>
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#basics">SQL Basics</a>
+        <a href="#intermediate">SQL Intermediate</a>
+        <a href="#advanced">Advanced SQL</a>
+        <a href="#sourcecode">Source Code Examples</a>
+    </nav>
+
+    <div class="container" id="introduction">
+        <h2>Introduction to SQL</h2>
+        <p>Structured Query Language (SQL) is a standard language for interacting with relational databases. It is used for managing and manipulating data in databases.</p>
+        <p>SQL allows users to perform various operations such as querying data, inserting, updating, and deleting records, creating and modifying database structures, and managing user permissions.</p>
+        <p>This document provides learning notes covering SQL basics, intermediate concepts, advanced topics, and source code examples to help you understand and practice SQL.</p>
+    </div>
+
+    <div class="container" id="basics">
+        <h2>SQL Basics</h2>
+        <p>Here are some fundamental concepts in SQL:</p>
+        <ul>
+            <li>SQL Syntax</li>
+            <li>Data Types</li>
+            <li>SELECT Statement</li>
+            <li>Filtering Data</li>
+            <li>Sorting Data</li>
+            <li>Joins</li>
+            <li>Aggregate Functions</li>
+            <li>Group By Clause</li>
+            <li>Subqueries</li>
+            <li>Inserting Data</li>
+            <li>Updating Data</li>
+            <li>Deleting Data</li>
+        </ul>
+
+        <div class="code">
+            <h3>Example 1: Basic SELECT Statement</h3>
+            <pre>
+                <code>
+SELECT column1, column2
+FROM table_name;
+                </code>
+            </pre>
+        </div>
+
+        <!-- Add more examples as needed -->
+    </div>
+
+    <div class="container" id="intermediate">
+        <h2>SQL Intermediate</h2>
+        <p>Here are some intermediate concepts in SQL:</p>
+        <ul>
+            <li>Views</li>
+            <li>Stored Procedures</li>
+            <li>Transactions</li>
+            <li>Indexes</li>
+            <li>Normalization</li>
+            <li>Constraints</li>
+            <li>Triggers</li>
+            <li>Performance Tuning</li>
+            <li>Security</li>
+            <li>Advanced Joins</li>
+            <li>Subqueries</li>
+            <li>Common Table Expressions (CTEs)</li>
+        </ul>
+
+        <div class="code">
+            <h3>Example 8: Creating a View</h3>
+            <pre>
+                <code>
+CREATE VIEW view_name AS
+SELECT column1, column2
+FROM table_name
+WHERE condition;
+                </code>
+            </pre>
+        </div>
+
+        <!-- Add more examples as needed -->
+    </div>
+
+    <div class="container" id="advanced">
+        <h2>Advanced SQL</h2>
+        <p>Here are some advanced topics in SQL:</p>
+        <ul>
+            <li>Window Functions</li>
+            <li>Recursive Queries</li>
+            <li>Common Table Expressions (CTEs)</li>
+            <li>Dynamic SQL</li>
+            <li>SQL Injection Prevention</li>
+            <li>Optimization Techniques</li>
+            <li>Query Performance Tuning</li>
+            <li>Data Warehousing Concepts</li>
+            <li>ETL Processes</li>
+            <li>NoSQL Databases</li>
+        </ul>
+
+        <div class="code">
+            <h3>Example 15: Using Window Functions</h3>
+            <pre>
+                <code>
+SELECT column1, column2, ROW_NUMBER() OVER (ORDER BY column1) AS row_num
+FROM table_name;
+                </code>
+            </pre>
+        </div>
+
+        <!-- Add more examples as needed -->
+    </div>
+
+    <div class="container" id="sourcecode">
+        <h2>SQL Source Code Examples</h2>
+        <p>Here are some source code examples in SQL:</p>
+
+        <div class="code">
+            <h3>Example 20: Creating a Stored Procedure</h3>
+            <pre>
+                <code>
+CREATE PROCEDURE procedure_name
+AS
+BEGIN
+    -- SQL statements here
+END;
+                </code>
+            </pre>
+        </div>
+
+        <!-- Add more examples as needed -->
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+  
+          <p class="copyright">
+            Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">MOHANKUMAR E LEARNING TECH HUB</a>
+          </p>
+  
+        </div>
+      </div>
+</body>
+</html>

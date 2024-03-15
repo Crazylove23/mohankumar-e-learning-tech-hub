@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Basics</title>
+    <link rel="stylesheet" href="mohan.css">
+    <header>
+        <h1>Java Basics</h1>
+    </header>
+    <nav>
+        <div class="containers">
+            <div class="row">
+                <a href="#introduction">Introduction</a>
+                <a href="#variables">Variables</a>
+                <a href="#data-types">Data Types</a>
+                <a href="#control-flow">Control Flow</a>
+                <a href="#methods">Methods</a>
+                <a href="#classes">Classes & Objects</a>
+                <a href="#arrays">Arrays</a>
+                <a href="#inheritance">Inheritance</a>
+                <a href="#polymorphism">Polymorphism</a>
+            </div>
+            <div class="row">
+                <a href="#exception-handling">Exception Handling</a>
+                <a href="#interfaces">Interfaces</a>
+                <a href="#packages">Packages</a>
+                <a href="#generics">Generics</a>
+                <a href="#multithreading">Multithreading</a>
+                <a href="#file-handling">File Handling</a>
+                <a href="#Basic Java Programs">Basic Java Programs</a>
+            </div>
+        </div>
+    </nav>
+   <div class="container"> 
+        <section id="introduction">
+            <h2>Introduction to Java</h2>
+            <p>Java is a widely-used programming language known for its portability, flexibility, and robustness. It was developed by Sun Microsystems (now owned by Oracle Corporation) in the mid-1990s. Java programs are platform-independent, meaning they can run on any device that has a Java Virtual Machine (JVM).</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Hello World program in Java</p>
+                    <p>public class HelloWorld {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hello, World!");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This program prints "Hello, World!" to the console.</p>
+            </div>
+        </section>
+        <section id="variables">
+            <h2>Variables</h2>
+            <p>In Java, a variable is a container that holds data. Variables have a data type and a name. They are used to store different types of values such as numbers, characters, and strings.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Variable declaration and initialization</p>
+                    <p>int num = 10;</p>
+                    <p>String name = "John";</p>
+                </div>
+                <p>In this example, 'num' is an integer variable holding the value 10, and 'name' is a string variable holding the value "John".</p>
+            </div>
+        </section>
+        <section id="data-types">
+            <h2>Data Types</h2>
+            <p>Java has several built-in data types to represent different kinds of values. These include primitive data types like int, double, char, and boolean, as well as reference data types like arrays, classes, and interfaces.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Primitive data types</p>
+                    <p>int age = 30;</p>
+                    <p>double price = 19.99;</p>
+                    <p>char grade = 'A';</p>
+                    <p>boolean isJavaFun = true;</p>
+                </div>
+                <p>In this example, 'age' is an integer, 'price' is a double, 'grade' is a character, and 'isJavaFun' is a boolean.</p>
+            </div>
+        </section>
+
+        <section id="control-flow">
+            <h2>Control Flow Statements</h2>
+            <p>Control flow statements in Java control the execution of code blocks based on conditions. These include if-else statements, switch statements, and loops like for, while, and do-while loops.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// if-else statement</p>
+                    <p>int num = 10;</p>
+                    <p>if (num &gt; 0) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Positive number");</p>
+                    <p>} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Negative number");</p>
+                    <p>}</p>
+                    <p>// for loop</p>
+                    <p>for (int i = 1; i &lt;= 5; i++) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Iteration " + i);</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates the usage of if-else statement and a for loop.</p>
+            </div>
+        </section>
+
+        <section id="methods">
+            <h2>Methods</h2>
+            <p>In Java, a method is a block of code that performs a specific task. Methods are used to organize code into reusable blocks, making it easier to manage and maintain.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Method declaration and invocation</p>
+                    <p>public class Calculator {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static int add(int a, int b) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a + b;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                    <p>// Calling the method</p>
+                    <p>int result = Calculator.add(5, 3); // result = 8</p>
+                </div>
+                <p>This example defines a method 'add' in a class 'Calculator' that adds two numbers.</p>
+            </div>
+        </section>
+
+        <section id="classes">
+            <h2>Classes and Objects</h2>
+            <p>Java is an object-oriented programming language, which means it uses classes and objects to model real-world entities. A class is a blueprint for creating objects, while an object is an instance of a class.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Class definition</p>
+                    <p>public class Car {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;String brand;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;int year;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public Car(String brand, int year) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.brand = brand;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.year = year;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                    <p>// Creating an object</p>
+                    <p>Car myCar = new Car("Toyota", 2020);</p>
+                </div>
+                <p>This example defines a class 'Car' with attributes 'brand' and 'year', and a constructor to initialize them. An object 'myCar' is then created using this class.</p>
+            </div>
+        </section>
+
+        <section id="arrays">
+            <h2>Arrays</h2>
+            <p>An array in Java is a collection of elements of the same data type. It allows you to store multiple values of the same type under a single variable name.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Array declaration and initialization</p>
+                    <p>int[] numbers = {1, 2, 3, 4, 5};</p>
+                    <p>String[] names = {"John", "Alice", "Bob"};</p>
+                </div>
+                <p>This example creates an array of integers and an array of strings.</p>
+            </div>
+        </section>
+
+        <section id="inheritance">
+            <h2>Inheritance</h2>
+            <p>Inheritance is a mechanism in Java that allows one class to inherit properties and behavior from another class. It promotes code reusability and helps in building a hierarchical relationship between classes.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Parent class</p>
+                    <p>class Animal {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;void eat() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Animal is eating");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                    <p>// Child class</p>
+                    <p>class Dog extends Animal {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;void bark() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Dog is barking");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates inheritance where the 'Dog' class inherits from the 'Animal' class.</p>
+            </div>
+        </section>
+
+        <section id="polymorphism">
+            <h2>Polymorphism</h2>
+            <p>Polymorphism in Java allows objects of different classes to be treated as objects of a common superclass. It enables methods to be called on objects without knowing their specific type at compile time.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Polymorphic method invocation</p>
+                    <p>class Animal {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;void sound() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Animal makes a sound");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                    <p>class Dog extends Animal {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;void sound() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Dog barks");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                    <p>Animal myAnimal = new Dog();</p>
+                    <p>myAnimal.sound(); // Output: Dog barks</p>
+                </div>
+                <p>In this example, the 'sound' method of the 'Dog' class is invoked through a reference of type 'Animal'.</p>
+            </div>
+        </section>
+
+        <section id="exception-handling">
+            <h2>Exception Handling</h2>
+            <p>Exception handling in Java allows you to handle runtime errors gracefully. It involves catching and handling exceptions that occur during the execution of a program.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Exception handling</p>
+                    <p>try {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;int result = 10 / 0;</p>
+                    <p>} catch (ArithmeticException e) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Error: Division by zero");</p>
+                    <p>}</p>
+                </div>
+                <p>In this example, an arithmetic exception is caught and handled using a try-catch block.</p>
+            </div>
+        </section>
+
+        <section id="interfaces">
+            <h2>Interfaces</h2>
+            <p>Interfaces in Java define a contract for classes to implement. They contain method signatures without any implementation, allowing classes to provide their own implementation for those methods.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Interface definition</p>
+                    <p>interface Vehicle {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;void drive();</p>
+                    <p>}</p>
+                    <p>// Class implementing the interface</p>
+                    <p>class Car implements Vehicle {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public void drive() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Car is being driven");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates a class 'Car' implementing the 'Vehicle' interface.</p>
+            </div>
+        </section>
+
+        <section id="packages">
+            <h2>Packages</h2>
+            <p>Packages in Java are used to organize classes into namespaces. They help in avoiding naming conflicts and provide a way to group related classes and interfaces together.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Package declaration</p>
+                    <p>package com.example.util;</p>
+                    <p>// Class in the package</p>
+                    <p>public class StringUtil {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static String reverse(String str) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new StringBuilder(str).reverse().toString();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example defines a package 'com.example.util' containing a class 'StringUtil'.</p>
+            </div>
+        </section>
+
+        <section id="generics">
+            <h2>Generics</h2>
+            <p>Generics in Java allow you to create classes, interfaces, and methods that operate on types specified at compile time. They provide type safety and enable you to write reusable code.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Generic class</p>
+                    <p>class Box&lt;T&gt; {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;private T content;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public void setContent(T content) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.content = content;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public T getContent() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return content;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates a generic class 'Box' that can hold any type of content.</p>
+            </div>
+        </section>
+
+        <section id="multithreading">
+            <h2>Multithreading</h2>
+            <p>Multithreading in Java allows you to execute multiple threads concurrently. Threads are lightweight processes that share the same memory space and can perform tasks independently.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Thread creation and execution</p>
+                    <p>class MyThread extends Thread {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public void run() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Thread is running");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                    <p>public class Main {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyThread thread = new MyThread();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thread.start();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates creating and running a thread in Java.</p>
+            </div>
+        </section>
+
+        <section id="file-handling">
+            <h2>File Handling</h2>
+            <p>File handling in Java allows you to read from and write to files on the file system. It provides classes and methods to perform various file operations.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// File reading and writing</p>
+                    <p>import java.io.*;</p>
+                    <p>public class Main {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File file = new File("example.txt");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileWriter writer = new FileWriter(file);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.write("Hello, World!");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.close();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (IOException e) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Error: " + e.getMessage());</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates writing to a file in Java.</p>
+            </div>
+        </section>
+
+        <section id="interfaces">
+            <h2>Interfaces</h2>
+            <p>Interfaces in Java define a contract for classes to implement. They contain method signatures without any implementation, allowing classes to provide their own implementation for those methods.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Interface definition</p>
+                    <p>interface Animal {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;void sound();</p>
+                    <p>}</p>
+                    <p>// Class implementing the interface</p>
+                    <p>class Dog implements Animal {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public void sound() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Woof!");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates a class 'Dog' implementing the 'Animal' interface.</p>
+            </div>
+        </section>
+
+        <section id="packages">
+            <h2>Packages</h2>
+            <p>Packages in Java are used to organize classes into namespaces. They help in avoiding naming conflicts and provide a way to group related classes and interfaces together.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Package declaration</p>
+                    <p>package com.example.util;</p>
+                    <p>// Class in the package</p>
+                    <p>public class StringUtil {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static String reverse(String str) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new StringBuilder(str).reverse().toString();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example defines a package 'com.example.util' containing a class 'StringUtil'.</p>
+            </div>
+        </section>
+
+        <section id="generics">
+            <h2>Generics</h2>
+            <p>Generics in Java allow you to create classes, interfaces, and methods that operate on types specified at compile time. They provide type safety and enable you to write reusable code.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Generic class</p>
+                    <p>class Box&lt;T&gt; {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;private T content;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public void setContent(T content) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.content = content;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public T getContent() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return content;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates a generic class 'Box' that can hold any type of content.</p>
+            </div>
+        </section>
+
+        <section id="multithreading">
+            <h2>Multithreading</h2>
+            <p>Multithreading in Java allows you to execute multiple threads concurrently. Threads are lightweight processes that share the same memory space and can perform tasks independently.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Thread creation and execution</p>
+                    <p>class MyThread extends Thread {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public void run() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Thread is running");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                    <p>public class Main {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyThread thread = new MyThread();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thread.start();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates creating and running a thread in Java.</p>
+            </div>
+        </section>
+
+        <section id="file-handling">
+            <h2>File Handling</h2>
+            <p>File handling in Java allows you to read from and write to files on the file system. It provides classes and methods to perform various file operations.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// File reading and writing</p>
+                    <p>import java.io.*;</p>
+                    <p>public class Main {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File file = new File("example.txt");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileWriter writer = new FileWriter(file);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.write("Hello, World!");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.close();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (IOException e) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Error: " + e.getMessage());</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates writing to a file in Java.</p>
+            </div>
+        </section>
+
+        <section id="serialization">
+            <h2>Serialization</h2>
+            <p>Serialization in Java is the process of converting an object into a byte stream, which can be persisted to a file or sent over a network. It allows objects to be saved and reconstructed later.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Serialization example</p>
+                    <p>import java.io.*;</p>
+                    <p>class MyClass implements Serializable {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;int num;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;String str;</p>
+                    <p>}</p>
+                    <p>public class Main {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyClass obj = new MyClass();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.num = 42;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.str = "Hello, World!";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileOutputStream fileOut = new FileOutputStream("example.ser");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ObjectOutputStream out = new ObjectOutputStream(fileOut);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.writeObject(obj);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.close();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileOut.close();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (IOException e) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates serializing an object to a file.</p>
+            </div>
+        </section>
+
+        <section id="networking">
+            <h2>Networking</h2>
+            <p>Networking in Java allows you to communicate over networks using various protocols such as TCP and UDP. It provides classes for creating sockets, handling streams, and implementing client-server communication.</p>
+            <div class="example">
+                <h3>Example:</h3>
+                <div class="code">
+                    <p>// Networking example</p>
+                    <p>import java.net.*;</p>
+                    <p>import java.io.*;</p>
+                    <p>public class Main {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Socket socket = new Socket("localhost", 1234);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataOutputStream out = new DataOutputStream(socket.getOutputStream());</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.writeUTF("Hello, Server!");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;socket.close();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (IOException e) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+                <p>This example demonstrates a simple client program in Java.</p>
+            </div>
+        </section>
+
+        <section id="Basic Java Programs">
+            <h2>Basic Java Programs</h2>
+            <div class="program">
+                <h3>Program 1: Hello World</h3>
+                <p>This program prints "Hello, World!" to the console.</p>
+                <div class="code">
+                    <p>public class HelloWorld {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hello, World!");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <div class="program">
+                <h3>Program 2: Sum of Two Numbers</h3>
+                <p>This program calculates and prints the sum of two numbers.</p>
+                <div class="code">
+                    <p>public class Sum {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num1 = 5;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num2 = 7;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int sum = num1 + num2;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Sum: " + sum);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <div class="program">
+                <h3>Program 3: Check Even or Odd</h3>
+                <p>This program checks if a number is even or odd.</p>
+                <div class="code">
+                    <p>public class EvenOrOdd {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = 9;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num % 2 == 0) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Even");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Odd");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 4: Swap Two Numbers -->
+            <div class="program">
+                <h3>Program 4: Swap Two Numbers</h3>
+                <p>This program swaps the values of two variables.</p>
+                <div class="code">
+                    <p>public class SwapNumbers {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a = 5, b = 10;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Before swapping - a: " + a + ", b: " + b);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int temp = a;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = b;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = temp;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("After swapping - a: " + a + ", b: " + b);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 5: Factorial of a Number -->
+            <div class="program">
+                <h3>Program 5: Factorial of a Number</h3>
+                <p>This program calculates the factorial of a given number.</p>
+                <div class="code">
+                    <p>public class Factorial {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = 5;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int factorial = 1;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i <= num; i++) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factorial *= i;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Factorial of " + num + " is: " + factorial);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 6: Fibonacci Series -->
+            <div class="program">
+                <h3>Program 6: Fibonacci Series</h3>
+                <p>This program prints the Fibonacci series up to a given number of terms.</p>
+                <div class="code">
+                    <p>public class Fibonacci {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int n = 10;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a = 0, b = 1;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Fibonacci series up to " + n + " terms:");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i <= n; i++) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(a + " ");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int temp = a + b;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = b;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = temp;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 7: Armstrong Number -->
+            <div class="program">
+                <h3>Program 7: Armstrong Number</h3>
+                <p>This program checks if a number is an Armstrong number.</p>
+                <div class="code">
+                    <p>public class ArmstrongNumber {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = 153;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int originalNumber, remainder, result = 0;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;originalNumber = num;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (originalNumber != 0) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder = originalNumber % 10;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result += Math.pow(remainder, 3);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;originalNumber /= 10;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (result == num) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num + " is an Armstrong number.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num + " is not an Armstrong number.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 8: Palindrome Number -->
+            <div class="program">
+                <h3>Program 8: Palindrome Number</h3>
+                <p>This program checks if a number is a palindrome.</p>
+                <div class="code">
+                    <p>public class PalindromeNumber {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = 121;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int reversedNumber = 0, originalNumber, remainder;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;originalNumber = num;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (num != 0) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder = num % 10;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reversedNumber = reversedNumber * 10 + remainder;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num /= 10;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (originalNumber == reversedNumber) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(originalNumber + " is a palindrome.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(originalNumber + " is not a palindrome.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 9: Leap Year -->
+            <div class="program">
+                <h3>Program 9: Leap Year</h3>
+                <p>This program checks if a year is a leap year.</p>
+                <div class="code">
+                    <p>public class LeapYear {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int year = 2024;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ((year % 400 == 0) || ((year % 4 == 0) &amp;&amp; (year % 100 != 0))) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(year + " is a leap year.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(year + " is not a leap year.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 10: Prime Number -->
+            <div class="program">
+                <h3>Program 10: Prime Number</h3>
+                <p>This program checks if a number is a prime number.</p>
+                <div class="code">
+                    <p>public class PrimeNumber {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = 29;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean isPrime = true;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num &lt; 2) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isPrime = false;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 2; i &lt;= Math.sqrt(num); i++) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num % i == 0) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isPrime = false;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isPrime) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num + " is a prime number.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num + " is not a prime number.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 11: Largest Among Three Numbers -->
+            <div class="program">
+                <h3>Program 11: Largest Among Three Numbers</h3>
+                <p>This program finds the largest among three numbers.</p>
+                <div class="code">
+                    <p>public class LargestAmongThree {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num1 = 10, num2 = 20, num3 = 15;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num1 &gt;= num2 &amp;&amp; num1 &gt;= num3) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num1 + " is the largest number.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (num2 &gt;= num1 &amp;&amp; num2 &gt;= num3) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num2 + " is the largest number.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num3 + " is the largest number.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 12: Reverse a String -->
+            <div class="program">
+                <h3>Program 12: Reverse a String</h3>
+                <p>This program reverses a given string.</p>
+                <div class="code">
+                    <p>public class ReverseString {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str = "Hello, World!";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String reversedString = "";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = str.length() - 1; i >= 0; i--) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reversedString += str.charAt(i);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Reversed string: " + reversedString);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 13: Find Length of a String -->
+            <div class="program">
+                <h3>Program 13: Find Length of a String</h3>
+                <p>This program finds the length of a given string.</p>
+                <div class="code">
+                    <p>public class StringLength {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str = "Hello, World!";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int length = str.length();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Length of the string: " + length);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 14: Count Vowels and Consonants in a String -->
+            <div class="program">
+                <h3>Program 14: Count Vowels and Consonants</h3>
+                <p>This program counts the number of vowels and consonants in a given string.</p>
+                <div class="code">
+                    <p>public class VowelsConsonantsCount {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str = "Hello, World!";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int vowels = 0, consonants = 0;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str = str.toLowerCase();</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < str.length(); i++) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char ch = str.charAt(i);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vowels++;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if ((ch >= 'a' &amp;&amp; ch <= 'z')) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consonants++;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Vowels: " + vowels);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Consonants: " + consonants);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 15: Check Palindrome String -->
+            <div class="program">
+                <h3>Program 15: Check Palindrome String</h3>
+                <p>This program checks if a string is a palindrome.</p>
+                <div class="code">
+                    <p>public class PalindromeString {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str = "madam";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String reversedStr = "";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = str.length() - 1; i >= 0; i--) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reversedStr += str.charAt(i);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (str.equals(reversedStr)) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(str + " is a palindrome.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(str + " is not a palindrome.");</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 16: Binary to Decimal -->
+            <div class="program">
+                <h3>Program 16: Binary to Decimal</h3>
+                <p>This program converts a binary number to decimal.</p>
+                <div class="code">
+                    <p>public class BinaryToDecimal {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String binary = "1010";</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int decimal = Integer.parseInt(binary, 2);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Decimal equivalent of " + binary + " is: " + decimal);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <!-- Program 17: Decimal to Binary -->
+            <div class="program">
+                <h3>Program 17: Decimal to Binary</h3>
+                <p>This program converts a decimal number to binary.</p>
+                <div class="code">
+                    <p>public class DecimalToBinary {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int decimal = 10;</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String binary = Integer.toBinaryString(decimal);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Binary equivalent of " + decimal + " is: " + binary);</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                </div>
+            </div>
+
+            <div class="program">
+    <h3>Program 18: Reverse a Number</h3>
+    <p>This program reverses a given number.</p>
+    <div class="code">
+        <p>public class ReverseNumber {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int number = 12345;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int reversedNumber = 0;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (number != 0) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int digit = number % 10;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reversedNumber = reversedNumber * 10 + digit;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number /= 10;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Reversed number: " + reversedNumber);</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>}</p>
+    </div>
+</div>
+
+<!-- Program 19: Find Maximum Element in an Array -->
+<div class="program">
+    <h3>Program 19: Find Maximum Element in an Array</h3>
+    <p>This program finds the maximum element in an array.</p>
+    <div class="code">
+        <p>public class MaxElementInArray {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int[] arr = {5, 10, 7, 15, 3};</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int max = arr[0];</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i < arr.length; i++) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arr[i] > max) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = arr[i];</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Maximum element in the array: " + max);</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>}</p>
+    </div>
+</div>
+
+<!-- Program 20: Sum of Elements in an Array -->
+<div class="program">
+    <h3>Program 20: Sum of Elements in an Array</h3>
+    <p>This program calculates the sum of elements in an array.</p>
+    <div class="code">
+        <p>public class SumOfArrayElements {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int[] arr = {5, 10, 7, 15, 3};</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int sum = 0;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < arr.length; i++) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += arr[i];</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Sum of elements in the array: " + sum);</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>}</p>
+    </div>
+</div>
+
+
+            <!-- Add more programs here... -->
+        </section>
+
+
+
+
+
+        <!-- Add more sections for other topics -->
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+  
+          <p class="copyright">
+            Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">MOHANKUMAR E LEARNING TECH HUB</a>
+          </p>
+  
+        </div>
+      </div>
+</body>
+</html>

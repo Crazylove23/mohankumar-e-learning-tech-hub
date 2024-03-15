@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming Course</title>
+    <link rel="stylesheet" href="mohan.css">
+
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #3498db; /* Adjust color code as desired */
+            color: #fff; /* Text color */
+            padding: 10px; /* Adjust padding as needed */
+            text-align: center; /* Center align text */
+            font-size: 24px; /* Adjust font size as desired */
+
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            max-width:1000px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            padding-top: 180px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        code {
+            background-color: #f2f2f2;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            border-left: 4px solid #666;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <container>
+        <header>
+            <h1>C++ Programming Course</h1>
+        </header>
+        <nav>
+            <div class="containers">
+                <a href="#topic1">Introduction</a></li>
+                <a href="#topic2">Variables and Data Types</a></li>
+                <a href="#topic3">Operators and Expressions</a></li>
+                <a href="#topic4">Control Flow</a></li>
+                <a href="#topic5">Functions</a></li>
+                <a href="#topic6">Arrays and Strings</a></li>
+                <a href="#topic7">Pointers and References</a></li>
+                <a href="#topic8">OOP Concepts</a></li>
+                <a href="#topic9">Classes and Objects</a></li>
+                <a href="#topic10">Inheritance and Polymorphism</a></li>
+                <a href="#topic11">Exception Handling</a></li>
+                <a href="#topic12">File Handling</a></li>
+                <a href="#topic13">Templates</a></li>
+                <a href="#topic14">STL</a></li>
+                <a href="#topic15">Memory Management</a></li>
+                <a href="#topic16">Best Practices</a></li>
+                <a href="#topic17">C++ 11/14/17 Features</a></li>
+                <a href="#topic18">Advanced Topics</a></li>
+
+        </nav>
+    <main>
+        <section id="topic1">
+            <h2>Introduction to C++</h2>
+            <p>C++ is a powerful programming language developed by Bjarne Stroustrup at Bell Labs in the early 1980s.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    #include &lt;iostream&gt;<br>
+                    using namespace std;<br>
+                    <br>
+                    int main() {<br>
+                    &emsp;   cout &lt;&lt; "Hello, World!" &lt;&lt; endl;<br>
+                    &emsp;   return 0;<br>
+                    }
+                </code>
+            </div>
+        </section>
+        <section id="topic2">
+            <h2>Variables and Data Types</h2>
+            <p>C++ supports various data types, including integers, floating-point numbers, characters, and booleans. Variables are used to store data of these types.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    int age = 25;<br>
+                    double weight = 68.5;<br>
+                    char grade = 'A';<br>
+                    bool isMale = true;
+                </code>
+            </div>
+        </section>
+        <section id="topic3">
+            <h2>Operators and Expressions</h2>
+            <p>C++ provides various operators for performing arithmetic, relational, logical, and other operations. Expressions are combinations of operators and operands that produce a value.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    int x = 10;<br>
+                    int y = 5;<br>
+                    int sum = x + y;<br>
+                    bool isGreater = (x > y);
+                </code>
+            </div>
+        </section>
+        <section id="topic4">
+            <h2>Control Flow</h2>
+            <p>Control flow statements allow you to control the flow of execution in a program. This includes conditional statements (if, else if, else) and loops (while, do-while, for).</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    int num = 10;<br>
+                    if (num % 2 == 0) {<br>
+                    &emsp;   cout &lt;&lt; "Even number" &lt;&lt; endl;<br>
+                    } else {<br>
+                    &emsp;   cout &lt;&lt; "Odd number" &lt;&lt; endl;<br>
+                    }
+                </code>
+            </div>
+        </section>
+        <section id="topic5">
+            <h2>Functions</h2>
+            <p>Functions in C++ are blocks of code that perform a specific task. They can be reused multiple times and help in organizing code into manageable pieces.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    int add(int a, int b) {<br>
+                    &emsp;   return a + b;<br>
+                    }<br>
+                    <br>
+                    int result = add(5, 3);
+                </code>
+            </div>
+        </section>
+        <section id="topic6">
+            <h2>Arrays and Strings</h2>
+            <p>Arrays and strings are used to store multiple values of the same data type. Arrays are collections of elements of the same type, while strings are collections of characters.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    int numbers[5] = {1, 2, 3, 4, 5};<br>
+                    char name[] = "John";
+                </code>
+            </div>
+        </section>
+        <section id="topic7">
+            <h2>Pointers and References</h2>
+            <p>Pointers and references are powerful features of C++ that allow you to work with memory directly. Pointers store memory addresses, while references provide an alias to an existing variable.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    int num = 10;<br>
+                    int *ptr = &num;<br>
+                    int &ref = num;
+                </code>
+            </div>
+        </section>
+        <section id="topic8">
+            <h2>Object-Oriented Programming (OOP) Concepts</h2>
+            <p>Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code. The main OOP concepts are encapsulation, inheritance, and polymorphism.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    class Car {<br>
+                    &emsp;   private:<br>
+                    &emsp;       string brand;<br>
+                    &emsp;       int year;<br>
+                    <br>
+                    &emsp;   public:<br>
+                    &emsp;       void setBrand(string b) { brand = b; }<br>
+                    &emsp;       void setYear(int y) { year = y; }<br>
+                    };
+                </code>
+            </div>
+        </section>
+        <section id="topic9">
+            <h2>Classes and Objects</h2>
+            <p>Classes are user-defined data types that contain data members and member functions. Objects are instances of classes that can access the members of the class.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    class Rectangle {<br>
+                    &emsp;   private:<br>
+                    &emsp;       int width;<br>
+                    &emsp;       int height;<br>
+                    <br>
+                    &emsp;   public:<br>
+                    &emsp;       void setDimensions(int w, int h) {<br>
+                    &emsp;           width = w;<br>
+                    &emsp;           height = h;<br>
+                    &emsp;       }<br>
+                    };
+                    <br>
+                    Rectangle rect;<br>
+                    rect.setDimensions(5, 3);
+                </code>
+            </div>
+        </section>
+        <section id="topic10">
+            <h2>Inheritance and Polymorphism</h2>
+            <p>Inheritance allows you to create a new class based on an existing class. Polymorphism allows objects of different classes to be treated as objects of a common superclass.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    class Animal {<br>
+                    &emsp;   public:<br>
+                    &emsp;       virtual void sound() {<br>
+                    &emsp;           cout &lt;&lt; "Animal makes a sound" &lt;&lt; endl;<br>
+                    &emsp;       }<br>
+                    };<br>
+                    <br>
+                    class Dog : public Animal {<br>
+                    &emsp;   public:<br>
+                    &emsp;       void sound() override {<br>
+                    &emsp;           cout &lt;&lt; "Dog barks" &lt;&lt; endl;<br>
+                    &emsp;       }<br>
+                    };
+                </code>
+            </div>
+        </section>
+        <section id="topic11">
+            <h2>Exception Handling</h2>
+            <p>Exception handling allows you to handle errors or exceptional situations gracefully. C++ provides try, catch, and throw keywords for exception handling.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    try {<br>
+                    &emsp;   int result = divide(10, 0);<br>
+                    } catch (const char* msg) {<br>
+                    &emsp;   cerr &lt;&lt; "Error: " &lt;&lt; msg &lt;&lt; endl;<br>
+                    }
+                </code>
+            </div>
+        </section>
+        <section id="topic12">
+            <h2>File Handling</h2>
+            <p>File handling in C++ allows you to perform input and output operations on files. You can read from and write to files using file stream classes.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    #include &lt;iostream&gt;<br>
+                    #include &lt;fstream&gt;<br>
+                    using namespace std;<br>
+                    <br>
+                    int main() {<br>
+                    &emsp;   ofstream outfile("example.txt");<br>
+                    &emsp;   outfile &lt;&lt; "Hello, File!" &lt;&lt; endl;<br>
+                    &emsp;   outfile.close();<br>
+                    }
+                </code>
+            </div>
+        </section>
+        <section id="topic13">
+            <h2>Templates</h2>
+            <p>Templates allow you to write generic functions and classes that can work with any data type. They enable code reuse and help in writing more flexible and efficient code.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    template &lt;typename T&gt;<br>
+                    T max(T a, T b) {<br>
+                    &emsp;   return (a &gt; b) ? a : b;<br>
+                    }<br>
+                    <br>
+                    int main() {<br>
+                    &emsp;   cout &lt;&lt; max(5, 10) &lt;&lt; endl;<br>
+                    &emsp;   cout &lt;&lt; max(3.14, 2.71) &lt;&lt; endl;<br>
+                    }
+                </code>
+            </div>
+        </section>
+        <section id="topic14">
+            <h2>Standard Template Library (STL)</h2>
+            <p>The Standard Template Library (STL) is a collection of classes and functions that provide reusable, generic algorithms, containers, and iterators. It simplifies complex programming tasks and improves code efficiency.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    #include &lt;iostream&gt;<br>
+                    #include &lt;vector&gt;<br>
+                    using namespace std;<br>
+                    <br>
+                    int main() {<br>
+                    &emsp;   vector&lt;int&gt; nums = {1, 2, 3, 4, 5};<br>
+                    &emsp;   for (int num : nums) {<br>
+                    &emsp;       cout &lt;&lt; num &lt;&lt; " ";<br>
+                    &emsp;   }<br>
+                    &emsp;   cout &lt;&lt; endl;<br>
+                    }
+                </code>
+            </div>
+        </section>
+        <section id="topic15">
+            <h2>Memory Management</h2>
+            <p>Memory management in C++ involves allocating and deallocating memory dynamically. C++ provides operators like new and delete for dynamic memory allocation and deallocation.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    int *ptr = new int;<br>
+                    *ptr = 10;<br>
+                    delete ptr;
+                </code>
+            </div>
+        </section>
+        <section id="topic16">
+            <h2>Best Practices</h2>
+            <p>Following best practices helps in writing clean, efficient, and maintainable code. This includes using meaningful variable names, proper indentation, and commenting code.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    // Example of using meaningful variable names<br>
+                    int numStudents = 20;<br>
+                    double averageScore = 85.5;
+                </code>
+            </div>
+        </section>
+        <section id="topic17">
+            <h2>C++ 11/14/17 Features</h2>
+            <p>New features introduced in C++ 11/14/17, such as auto keyword, lambda expressions, range-based for loops, and smart pointers, improve code readability and productivity.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    // Example of using auto keyword<br>
+                    auto x = 10;<br>
+                    auto y = 3.14;<br>
+                    auto name = "John";
+                </code>
+            </div>
+        </section>
+        <section id="topic18">
+            <h2>Advanced Topics</h2>
+            <p>Advanced topics in C++ programming include multithreading, networking, graphics programming, and game development.</p>
+            <div class="example">
+                <p>Example:</p>
+                <code>
+                    // Example of multithreading<br>
+                    #include &lt;iostream&gt;<br>
+                    #include &lt;thread&gt;<br>
+                    using namespace std;<br>
+                    <br>
+                    void threadFunction() {<br>
+                    &emsp;   cout &lt;&lt; "Hello from thread!" &lt;&lt; endl;<br>
+                    }<br>
+                    <br>
+                    int main() {<br>
+                    &emsp;   thread t(threadFunction);<br>
+                    &emsp;   t.join();<br>
+                    }
+                </code>
+            </div>
+        </section>
+        <!-- Add more sections for other topics -->
+    </main>
+    <footer>
+        <div class="footer-bottom">
+            <div class="container">
+      
+              <p class="copyright">
+                Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">MOHANKUMAR E LEARNING TECH HUB</a>
+              </p>
+      
+            </div>
+          </div>
+    </footer>
+</body>
+</html>

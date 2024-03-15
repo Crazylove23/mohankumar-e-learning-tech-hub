@@ -1,0 +1,84 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* changed to a brighter shade */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #87ceeb; /* changed to a brighter shade */
+            color: #fff;
+            text-align: center;
+            padding: 1px 0;
+            position: fixed; /* fixed positioning */
+            width: 100%; /* full width */
+            top: 0; /* stick to the top */
+            z-index: 1000; /* ensure it's on top of other content */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 5px;
+            border: 1px solid #fff; /* added border */
+            border-radius: 5px; /* added border-radius */
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .containers {
+            max-width: 8000px;
+            margin: 15px auto 20px; /* adjust margin to accommodate fixed nav */
+            padding: 20px;
+        }
+        .container{
+            text-align: center;
+            padding: 350px;
+            
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .definition {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #87ceeb; /* Light blue navigation bar */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed; /* Fixed position at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 5px;
+            border: 1px solid #fff; /* White border */
+            border-radius: 5px; /* Rounded corners */
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 90px auto 20px; /* Adjust margin to accommodate fixed nav */
+            padding: 0 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .code {
+            background-color: #f0f0f0; /* Light gray background */
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Learning Notes</h1>
+    </header>
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#basics1">Basics Part 1</a>
+        <a href="#basics2">Basics Part 2</a>
+        <a href="#intermediate1">Intermediate Part 1</a>
+        <a href="#intermediate2">Intermediate Part 2</a>
+        <a href="#sourcecode">Source Code Examples</a>
+    </nav>
+   <div class="container" id="introduction">
+        <h2>Introduction to HTML</h2>
+        <p>HTML (Hypertext Markup Language) is the standard markup language for creating web pages and web applications. It describes the structure of web pages using markup.</p>
+        <p>HTML elements are represented by tags, which encapsulate content to be rendered on the web page. These elements can include headings, paragraphs, links, images, forms, and more.</p>
+        <p>This document provides learning notes covering various aspects of HTML, including basics, intermediate concepts, and source code examples.</p>
+    </div>
+
+    <div class="container" id="basics1">
+        <h2>HTML Basics - Part 1</h2>
+        <p>Here are some basic concepts in HTML:</p>
+        <ul>
+            <li><strong>Tags and Elements:</strong> HTML documents are made up of elements represented by tags.</li>
+            <li><strong>Attributes:</strong> Attributes provide additional information about an element, such as its ID or class.</li>
+            <li><strong>HTML Structure:</strong> Every HTML document should have a proper structure with `<html>`, `<head>`, and `<body>` tags.</li>
+        </ul>
+
+        <div class="code">
+            <h3>Example 1: Basic HTML Structure</h3>
+            <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My HTML Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+
+        <div class="code">
+            <h3>Example 2: Adding Images</h3>
+            <pre>
+                <code>
+&lt;img src="image.jpg" alt="Description of the image"&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="container" id="basics2">
+        <h2>HTML Basics - Part 2</h2>
+        <p>Here are some more basic concepts in HTML:</p>
+        <ul>
+            <li>Links and Anchor Tags</li>
+            <li>Lists</li>
+            <li>Forms and Input Elements</li>
+        </ul>
+
+        <div class="code">
+            <h3>Example 4: Creating a Form</h3>
+            <pre>
+                <code>
+&lt;form action="#" method="post"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;&lt;br&gt;
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="container" id="intermediate1">
+        <h2>HTML Intermediate - Part 1</h2>
+        <p>Here are some intermediate concepts in HTML:</p>
+        <ul>
+            <li>Tables</li>
+            <li>Forms - Advanced</li>
+            <li>HTML Semantics</li>
+        </ul>
+
+        <div class="code">
+            <h3>Example 6: Creating a Table</h3>
+            <pre>
+                <code>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="container" id="intermediate2">
+        <h2>HTML Intermediate - Part 2</h2>
+        <p>Here are some more intermediate concepts in HTML:</p>
+        <ul>
+            <li>Media Elements (Images, Audio, Video)</li>
+            <li>HTML Forms - Validation and Accessibility</li>
+            <li>HTML5 Semantic Elements</li>
+        </ul>
+
+        <div class="code">
+            <h3>Example 8: Inserting an Image</h3>
+            <pre>
+                <code>
+&lt;img src="image.jpg" alt="Description of the image"&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="container" id="sourcecode">
+        <h2>HTML Source Code Examples</h2>
+        <p>Here are some source code examples in HTML:</p>
+
+        <div class="code">
+            <h3>Example 10: Complete HTML Document</h3>
+            <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My HTML Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+  
+          <p class="copyright">
+            Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">MOHANKUMAR E LEARNING TECH HUB</a>
+          </p>
+  
+        </div>
+      </div>
+</body>
+</html>
